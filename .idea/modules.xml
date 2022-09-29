@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/18-OOPS/18-OOPS.iml" filepath="$PROJECT_DIR$/18-OOPS/18-OOPS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java-Course.iml" filepath="$PROJECT_DIR$/Java-Course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/conditional statement/conditional statement.iml" filepath="$PROJECT_DIR$/conditional statement/conditional statement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/variables and data types/variables and data types.iml" filepath="$PROJECT_DIR$/variables and data types/variables and data types.iml" />
+    </modules>
+  </component>
+</project>

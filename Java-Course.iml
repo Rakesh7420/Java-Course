@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/10-functions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/11-advanced_patterns" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/12-arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/13-Sorting" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/15-2D arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/16-Strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/17-bit manipulation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/19-Recursion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20-Divide and Conuer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/22-backtracking" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/23 arraylist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/24 linkedlist(part-1)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/25 linkedlist(part-2)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/26-stacks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/27-queue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/28-Greedy Algorithm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/29-binary trees(part-1)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-Loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/9-patterns" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
