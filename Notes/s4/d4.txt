@@ -1,0 +1,174 @@
+--Rest API using Spring Boot.
+
+--Sending data from client to our api.
+
+Path variable
+Request parameter
+Request body
+
+Example:
+=========
+
+StudentController.java:
+===================
+
+
+@RestController
+public class StudentController {
+
+	private List<Student> students = new ArrayList<>();
+
+	@PostConstruct
+	public void setupStudents() {
+
+		students.add(new Student(10, "Ram", "delhi", 700));
+		students.add(new Student(12, "Ravi", "chennai", 720));
+		students.add(new Student(13, "Ramesh", "mumbai", 740));
+		students.add(new Student(14, "Pawan", "delhi", 800));
+
+	}
+
+	@GetMapping("/students")
+	public List<Student> getAllStudentsHandler() {
+
+		return students;
+
+	}
+
+	@PostMapping("/students")
+	public Student registerStudentHandler(@RequestBody Student student) {
+
+		students.add(student);
+
+		return student;
+
+	}
+
+	@GetMapping("/students/{roll}")
+	public Student getStudentHandler(@PathVariable("roll") Integer roll) {
+
+		Student s = null;
+
+		for (Student student : students) {
+			if (student.getRoll() == roll)
+				s = student;
+		}
+
+		if (s != null)
+			return s;
+		else
+			throw new IllegalArgumentException("Student does not exist with Roll :" + roll);
+
+	}
+
+	@DeleteMapping("/students/{roll}")
+	public String deleteStudentHandler(@PathVariable("roll") Integer roll) {
+
+		boolean flag = true;
+
+		for (int i = 0; i < students.size(); i++) {
+
+			if (students.get(i).getRoll() == roll) {
+				students.remove(i);
+				flag = false;
+				break;
+			}
+
+		}
+
+		if (!flag)
+			return "Student Deleted Sucessfully..";
+		else
+			throw new IllegalArgumentException("Student does not exist with roll :" + roll);
+
+	}
+
+	@PutMapping("/students/{roll}")
+	public Student updateStudentHandler(@RequestBody Student student, @PathVariable("roll") Integer roll) {
+
+		boolean flag = true;
+
+		for (int i = 0; i < students.size(); i++) {
+
+			if (students.get(i).getRoll() == roll) {
+
+				Student existingStudent = students.get(i);
+
+				// existingStudent = student;
+
+				existingStudent.setName(student.getName());
+				existingStudent.setAddress(student.getAddress());
+				existingStudent.setMarks(student.getMarks());
+
+				flag = false;
+				return existingStudent;
+			}
+
+		}
+
+		if (flag)
+			throw new IllegalArgumentException("Student does not exist with Roll :" + roll);
+
+		return null;
+
+	}
+
+}
+
+
+ResponseEntity:
+=============
+
+ResponseEntity object represents the Whole Http Response:
+
+status code + headers + response body.
+
+--we can use this ResponseEntity to configure our entire response.
+
+
+@GetMapping("/students")
+	public ResponseEntity<List<Student>> getAllStudentsHandler() {
+
+		//return students;
+
+		return new ResponseEntity<List<Student>>(students,HttpStatus.OK);
+	}
+
+	@PostMapping("/students")
+	public  ResponseEntity<Student> registerStudentHandler(@RequestBody Student student) {
+
+		students.add(student);
+
+		HttpHeaders hh = new HttpHeaders();
+		hh.add("abc", "xyz");
+		hh.add("Authorization", "jwttoken");
+		hh.add("role", "admin");
+		
+		
+return new ResponseEntity<Student>(student, hh,HttpStatus.CREATED); // with response headers
+		
+//return new ResponseEntity<Student>(student,HttpStatus.OK); //without response headers
+
+}
+
+
+
+Naming convention of Rest Api:
+=========================
+
+--uri name should be pulural noun and action we need to represent using Http methods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
