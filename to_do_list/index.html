@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO list made by Gayatrri</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <input type="text" placeholder="Add a task in your ToDO list" />
+        <button>Add</button>
+      </div>
+
+      <ol class="notcompleted">
+        <h3>Not Completed</h3>
+        <li>
+          Task
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="fa-solid fa-trash-can"></i></button>
+        </li>
+      </ol>
+
+      <ol class="completed">
+        <h3>Completed</h3>
+        <li>
+          Task
+          <button><i class="fa-solid fa-trash-can"></i></button>
+        </li>
+      </ol>
+    </div>
+
+    <script>
+      const input = document.querySelector("input");
+      const btn = document.querySelector(".title > button");
+
+      function addList(e) {
+        const notCompleted = document.queryselector("input");
+      }
+    </script>
+  </body>
+</html>

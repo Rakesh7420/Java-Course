@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #0aaac3;
+    background: linear-gradient(129deg, #e66465 0%, #9198e5 90%);
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.title>input[type="text"] {
+    width: 90%;
+    color: rgb(21, 18, 18);
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+.title>button {
+    margin: 0 10px;
+    color: #fff;
+    background: black;
+    font-size: 18px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.notcompleted,
+.completed {
+    margin: 5px, 0;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+ol li {
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0;
+    background: #aedcef;
+    font-size: 18px;
+    counter-increment: my-counter;
+}
+
+ol.completed li {
+    background: #0ac35a;
+}
+
+ol li::before {
+    content: counter(my-counter);
+    background: #4d5cfb;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 25px;
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+li button {
+    float: right;
+    padding: 8px;
+    font-size: 25px;
+    line-height: 28px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
